@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <NS_Update>
+            <version>0.0.1</version>
+        </NS_Update>
+    </modules>
+    <frontend>
+        <routers>
+            <nsupdate>
+                <use>standard</use>
+                <args>
+                    <module>NS_Update</module>
+                    <frontName>update</frontName>
+                </args>
+            </nsupdate>
+        </routers>
+        <layout>
+            <updates>
+                <newsletter>
+                    <file>newsletter.xml</file>
+                </newsletter>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <newsletter>
+                <class>NS_Update_Block_Name</class>
+            </newsletter>
+        </blocks>
+    </global>
+</config>
