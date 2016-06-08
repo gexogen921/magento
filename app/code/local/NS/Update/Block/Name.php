@@ -1,10 +1,8 @@
 <?php
-class NS_Update_Block_Name extends Mage_Core_Controller_Front_Action
+class NS_Update_Block_Name extends Mage_Newsletter_Block_Subscribe
 {
     public function indexAction() {
-        $this->loadLayout();
-        $block = "newsletter.xml";
+        $block = "templates/newsletter.xml";
         $this->getLayout()->getBlock('header')->append($block);
-        $this->renderLayout();
     }
 }

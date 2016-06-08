@@ -35,8 +35,16 @@ Default layout, loads most of the pages
     <default>
 
         <!-- Mage_Newsletter -->
-        <reference name="footer">
-            <block type="newsletter/subscribe" name="footer.newsletter" as="newsletter" before="footer_store_language" template="newsletter/subscribe.phtml"/>
+        <!--<reference name="footer">-->
+            <!--<block type="newsletter/subscribe" name="footer.newsletter" as="newsletter" before="footer_store_language" template="newsletter/subscribe.phtml"/>-->
+        <!--</reference>-->
+
+        <reference name="footer.newsletter">
+            <remove name="newsletter/subscribe" />
+            <action method="unsetChild"><name>subscribe</name></action>
+            <reference name="header">
+                <action method="insert"><child>newsletter/subscribe</child></action>
+            </reference>
         </reference>
     </default>
 
